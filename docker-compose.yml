@@ -1,0 +1,15 @@
+version: '2.1'
+
+services:
+
+  lotus:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 1347:1347
+      - 1234:1234
+    volumes:
+      - .:/lotus-client
+      - .lotus:/root/.lotus
+      - .lotusstorage:/root/.lotusstorage
